@@ -18,4 +18,14 @@ head(data1, 6);
 5 2018     8 ДВ "Нафтогазовидобувна компанія"     34181461  ТЕЦ-2 (Есхар)      АШ+П  1.941 18.378       18.254
 6 2018     8 ДВ "Нафтогазовидобувна компанія"     34181461  ТЕЦ-2 (Есхар)        ГД  0.000  0.000        0.000
 ```
-
+## 2. За допомогою download.file() завантажте файл getdata_data_ss06hid.csv за посиланням https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv та завантажте дані в R. Code book, що пояснює значення змінних знаходиться за посиланням https://www.dropbox.com/s/dijv0rlwo4mryv5/PUMSDataDict06.pdf?dl=0 Необхідно знайти, скільки property мають value $1000000+
+```{r}
+getdata_data_ss06hid_Url = "https://d396qusza40orc.cloudfront.net/getdata/data/ss06hid.csv"
+download.file(getdata_data_ss06hid_Url, "data2.csv", "auto", TRUE)
+data2 <- read.csv("data2.csv")
+### Відповідно до Cook book, значення "24" поля VAL відповідають значенням $1m+
+sum(data2$VAL == 24, na.rm = TRUE)
+```
+```
+[1] 53
+```
