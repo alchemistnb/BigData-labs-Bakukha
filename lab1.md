@@ -24,7 +24,6 @@ head(data1, 6);
 getdata_data_ss06hid_Url = "https://d396qusza40orc.cloudfront.net/getdata/data/ss06hid.csv"
 download.file(getdata_data_ss06hid_Url, "data2.csv", "auto", TRUE)
 data2 <- read.csv("data2.csv")
-### Відповідно до Cook book, значення "24" поля VAL відповідають значенням $1m+
 sum(data2$VAL == 24, na.rm = TRUE)
 ```
 ```
