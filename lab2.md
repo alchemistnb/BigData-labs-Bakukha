@@ -113,5 +113,6 @@ numSamples <- 1000000
 plot(myTime[0:numSamples], strain[0:numSamples], type = "l", xlab = "GPS Time (s)", ylab = "H1 Strain")
 ```
 ```
- 
+ ![Lab2Plot](https://user-images.githubusercontent.com/47064897/120690410-d9f48880-c4ad-11eb-9b11-468330afa3ce.png)
+
 ```
